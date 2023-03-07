@@ -1,0 +1,38 @@
+@import "./variables.scss";
+
+.btn {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  padding: 12px 25px 8px;
+  border-radius: 8px;
+  display: flex;
+  text-align: center;
+  &-icon {
+    margin-right: 10px;
+  }
+  &-blue {
+    border: 2px solid $blue;
+    color: $blue;
+    &-fill {
+      background-color: $blue;
+      color: #fff;
+    }
+  }
+  &-yellow {
+    border: 2px solid $yellow;
+    color: $yellow;
+    &-fill {
+      background-color: $yellow;
+      color: #fff;
+    }
+  }
+  &-red {
+    border: 2px solid $red;
+    color: $red;
+    &-fill {
+      background-color: $red;
+      color: #fff;
+    }
+  }
+}

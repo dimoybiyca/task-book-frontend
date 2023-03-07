@@ -1,0 +1,14 @@
+<div class="block">
+  <h4 class="block__title">Let's take a look</h4>
+  <div class="block__inner">
+    <div class="block__element">
+      <p class="subtitle">On the clock</p>
+      <span class="crono">{{ time | date : "HH:mm:ss" }}</span>
+    </div>
+
+    <div class="block__element">
+      <p class="subtitle">Today we have</p>
+      <span class="crono">{{ time | date : "d MMMM y" }}</span>
+    </div>
+  </div>
+</div>

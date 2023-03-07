@@ -1,0 +1,24 @@
+.logo {
+  margin-bottom: 60px;
+}
+
+.side-nav {
+  width: 240px;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  box-shadow: (0px 10px 25px rgba(29, 52, 54, 0.08));
+}
+
+.btn__add {
+  display: flex;
+  gap: 10px;
+  color: #29a19c;
+  margin-bottom: 60px;
+}
+
+.btn__exit {
+  margin-top: auto;
+}

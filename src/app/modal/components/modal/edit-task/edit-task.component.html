@@ -1,0 +1,8 @@
+<div class="modal">
+  <h2 class="modal__title accent">Edit task</h2>
+
+  <tb-task-form
+    [initialValues]="initialValues$ | async"
+    (taskSubmit)="onSubmit($event)"
+  ></tb-task-form>
+</div>

@@ -1,0 +1,15 @@
+<div class="side-nav background-primary">
+  <tb-logo class="logo"></tb-logo>
+
+  <tb-nav-list listTitle="Categories" [categories]="this.categories$">
+  </tb-nav-list>
+  <button
+    class="btn__add"
+    (click)="onAddCategory()"
+    *ngIf="this.categories$ | async"
+  >
+    <tb-icon iconName="ICON_ADD-TASK"></tb-icon>Add
+  </button>
+
+  <button class="btn__exit">Exit</button>
+</div>

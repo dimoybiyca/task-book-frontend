@@ -1,1 +1,216 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~normalize.css";
+@import "./scss/buttons.scss";
+
+@mixin dark-mode {
+  background-color: $secondary--dark;
+  color: $font--dark;
+
+  .background-primary {
+    background-color: $primary--dark;
+  }
+
+  .color-seconadary {
+    color: $secondary--light;
+  }
+
+  .filter {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(41deg)
+      brightness(103%) contrast(102%);
+  }
+
+  .border {
+    border: 1px solid rgba(249, 249, 249, 0.2);
+  }
+
+  .hover-shadow {
+    &:hover {
+      -webkit-box-shadow: 0px 11px 5px -10px rgba(255, 255, 255, 0.51);
+      -moz-box-shadow: 0px 11px 5px -10px rgba(255, 255, 255, 0.51);
+      box-shadow: 0px 11px 5px -10px rgba(255, 255, 255, 0.51);
+      transform: translateY(-1px);
+    }
+  }
+}
+
+@mixin light-mode {
+  background-color: $secondary--light;
+  color: $font--light;
+
+  .background-primary {
+    background-color: $primary--light;
+  }
+
+  .border {
+    border: 1px solid rgba(40, 40, 70, 0.1);
+  }
+
+  .hover-shadow {
+    &:hover {
+      -webkit-box-shadow: 0px 11px 5px -7px rgba(0, 0, 0, 0.51);
+      -moz-box-shadow: 0px 11px 5px -7px rgba(0, 0, 0, 0.51);
+      box-shadow: 0px 11px 5px -7px rgba(0, 0, 0, 0.51);
+      transform: translateY(-1px);
+    }
+  }
+}
+
+.light-mode {
+  @include light-mode();
+}
+
+.dark-mode {
+  @include dark-mode();
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+}
+
+body {
+  @include light-mode();
+  font-size: 14px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body:not(.dark-mode-preloading) {
+  transition: all 0.3s linear;
+}
+
+.auth-page {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block {
+  @extend .background-primary;
+  padding: 20px;
+  box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.08);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  &__title {
+    color: $blue;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+  }
+}
+
+.auth {
+  width: 350px;
+  box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.08);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    color: $blue;
+    text-align: center;
+    margin-top: 0;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__text {
+    text-align: center;
+  }
+  &__link {
+    color: $blue;
+  }
+  &__input {
+    @extend .border;
+    margin-bottom: 20px;
+    width: 100%;
+    width: 300px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+  &__btn {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .alt {
+    &__text {
+      font-size: 16px;
+      font-weight: 600;
+      display: flex;
+      gap: 5px;
+      flex-direction: row;
+      color: #a9a9b5;
+    }
+  }
+
+  h4:before,
+  h4:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 2px solid #a9a9b5;
+    margin: auto;
+  }
+}
+
+.tb-input {
+  @extend .border;
+  width: 100%;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.accent {
+  color: $blue;
+}
+
+.ng-select {
+  @extend .border;
+  border-radius: 8px;
+  background-color: transparent !important;
+}
+
+.ng-select-container {
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.label-hidden {
+  display: none;
+}

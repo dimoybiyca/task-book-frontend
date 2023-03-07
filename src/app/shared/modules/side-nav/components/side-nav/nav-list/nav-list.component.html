@@ -1,0 +1,14 @@
+<div class="nav" *ngIf="categoriesProps$ | async as categories">
+  <h3 class="list__title">{{ listTitleProps }}</h3>
+  <ul class="list">
+    <li class="list__item hover-shadow" *ngFor="let category of categories">
+      <a
+        class="list__href"
+        routerLinkActive="active"
+        [routerLink]="'categories/' + category.id + '/tasks'"
+        routerLinkActive="active"
+        >{{ category.name }}
+      </a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,33 @@
+<div
+  class="task border"
+  (mouseenter)="isHovered = true"
+  (mouseleave)="isHovered = false; confirmDelete = false"
+  [ngClass]="{ completed: isCompleted }"
+>
+  <input
+    class="checkbox"
+    type="checkbox"
+    [checked]="isCompleted"
+    (change)="changeStatus($event)"
+    *ngIf="isHovered"
+  />
+  {{ taskProps.name }}
+
+  <div class="task__controls" *ngIf="isHovered">
+    <button class="task__btn" (click)="onUpdate()">
+      <tb-icon class="task__icon filter" iconName="ICON_EDIT"></tb-icon>
+    </button>
+
+    <button
+      class="task__btn"
+      (click)="confirmDelete = true"
+      *ngIf="!confirmDelete"
+    >
+      <tb-icon class="task__icon" iconName="ICON_TRASH"></tb-icon>
+    </button>
+
+    <button class="task__btn" (click)="delete()" *ngIf="confirmDelete">
+      <tb-icon class="task__icon" iconName="ICON_DANGER"></tb-icon>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 300px;
+  color: #a9a9b5;
+  padding-bottom: 20px;
+  gap: 50px;
+}
+
+.footer__item + .footer__item {
+  margin-left: 50px;
+}

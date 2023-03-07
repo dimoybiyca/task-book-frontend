@@ -1,0 +1,32 @@
+<div class="modal">
+  <div class="modal__top">
+    <h2 class="modal__title accent">Add new category</h2>
+  </div>
+
+  <form>
+    <fieldset>
+      <fieldset>
+        <label class="form__label" for="title">Category name</label>
+        <input
+          type="text"
+          class="tb-input"
+          id="name"
+          placeholder="Name"
+          formControlName="name"
+        />
+      </fieldset>
+    </fieldset>
+
+    <div class="form__control">
+      <button
+        class="btn btn-red-fill btn-cancel"
+        type="button"
+        (click)="onCancel()"
+      >
+        Cancel
+      </button>
+      <button class="btn btn-blue" type="button">Save as template</button>
+      <button class="btn btn-blue-fill" type="button">Create</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,64 @@
+<div class="task-form">
+  <form [formGroup]="form">
+    <fieldset>
+      <fieldset>
+        <label class="form__label" for="title">What do you need to do?</label>
+        <input
+          type="text"
+          class="tb-input input__task-name"
+          id="title"
+          placeholder="Title"
+          formControlName="name"
+        />
+      </fieldset>
+
+      <fieldset class="form-group">
+        <fieldset>
+          <label class="form__label" for="title">Category</label>
+          <ng-select
+            [items]="$categories | async"
+            bindLabel="name"
+            bindValue="id"
+            placeholder="Category"
+            formControlName="categoryId"
+          ></ng-select>
+        </fieldset>
+
+        <fieldset>
+          <label class="form__label" for="title">When</label>
+          <input
+            type="date"
+            class="tb-input"
+            id="when"
+            formControlName="deadlineDate"
+          />
+        </fieldset>
+
+        <fieldset>
+          <label class="form__label" for="title">Priority</label>
+          <ng-select
+            [items]="priorities"
+            placeholder="Priority"
+            formControlName="priority"
+          ></ng-select>
+        </fieldset>
+      </fieldset>
+    </fieldset>
+
+    <div class="form__control">
+      <button
+        class="btn btn-red-fill btn-cancel"
+        type="button"
+        (click)="onCancel()"
+      >
+        Cancel
+      </button>
+      <button class="btn btn-blue" type="button" (click)="onSaveTemplate()">
+        Save as template
+      </button>
+      <button class="btn btn-blue-fill" type="button" (click)="onCreateTask()">
+        Save
+      </button>
+    </div>
+  </form>
+</div>

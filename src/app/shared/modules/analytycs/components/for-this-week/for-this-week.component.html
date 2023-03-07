@@ -1,0 +1,17 @@
+<div class="block">
+  <h4 class="block__title">For this week</h4>
+  <div class="block__inner" *ngIf="statisticNumbers$ | async as statistic">
+    <tb-counter
+      counterTitle="Created"
+      [taskCounter]="statistic.created"
+    ></tb-counter>
+    <tb-counter
+      counterTitle="Completed"
+      [taskCounter]="statistic.completed"
+    ></tb-counter>
+    <tb-counter
+      counterTitle="Deleted"
+      [taskCounter]="statistic.deleted"
+    ></tb-counter>
+  </div>
+</div>

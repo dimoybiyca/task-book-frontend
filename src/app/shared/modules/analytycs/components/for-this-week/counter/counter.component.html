@@ -1,0 +1,5 @@
+<h4 class="title">{{ counterTitleProps }}</h4>
+<div class="counter">
+  <span class="counter__number">{{ (counter$ | async) || 0 }}</span>
+  <span class="counter__tag">Tasks</span>
+</div>

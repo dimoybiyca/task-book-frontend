@@ -1,0 +1,13 @@
+<div class="modal">
+  <div class="modal__top">
+    <h2 class="modal__title accent">Add new task</h2>
+
+    <label class="label-hidden" for="title">Category</label>
+    <ng-select bindLabel="name" placeholder="Template"></ng-select>
+  </div>
+
+  <tb-task-form
+    [initialValues]="initialValues"
+    (taskSubmit)="onSubmit($event)"
+  ></tb-task-form>
+</div>

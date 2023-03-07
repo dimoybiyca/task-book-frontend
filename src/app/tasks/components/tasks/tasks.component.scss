@@ -1,0 +1,13 @@
+.tasks {
+  &__wrapper {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+.block {
+  width: 50%;
+  &__title {
+    margin-bottom: 10px;
+  }
+}

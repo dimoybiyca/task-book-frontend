@@ -1,0 +1,7 @@
+<header class="header">
+  <button class="btn btn-blue-fill" (click)="onAddTask()">
+    <tb-icon class="btn-icon" iconName="ICON_ADD-CIRCLE"></tb-icon> New task
+  </button>
+  <button (click)="toggleDarkTheme()">Light theme</button>
+  <tb-user *ngIf="currentUser$" [user]="currentUser$ | async"></tb-user>
+</header>

@@ -1,0 +1,7 @@
+<tb-block [isLoading]="isLoading | async">
+  <h4 class="block__title">Nearest tasks</h4>
+  <tb-task-list [tasks]="inProgress"></tb-task-list>
+
+  <h4 class="block__title">Recently completed</h4>
+  <tb-task-list [tasks]="completed"></tb-task-list>
+</tb-block>

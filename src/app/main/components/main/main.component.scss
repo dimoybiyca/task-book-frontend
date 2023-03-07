@@ -1,0 +1,11 @@
+.main__wrapper {
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  gap: 30px;
+}
+
+.left,
+.right {
+  background-color: transparent;
+}

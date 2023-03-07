@@ -1,0 +1,54 @@
+<header class="header">
+  <tb-logo></tb-logo>
+</header>
+
+<div class="auth-page">
+  <div class="auth background-primary">
+    <h2 class="auth__title">Sign In</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <fieldset>
+        <fieldset>
+          <input
+            type="text"
+            class="auth__input"
+            placeholder="Username"
+            formControlName="username"
+          />
+        </fieldset>
+
+        <fieldset>
+          <input
+            type="text"
+            class="auth__input"
+            placeholder="Email"
+            formControlName="email"
+          />
+        </fieldset>
+
+        <fieldset>
+          <input
+            type="password"
+            class="auth__input"
+            placeholder="Password"
+            formControlName="password"
+          />
+        </fieldset>
+
+        <button class="btn auth__btn btn-blue-fill" type="submit">
+          Sign In
+        </button>
+      </fieldset>
+    </form>
+
+    <p class="auth__text">
+      Have an account?
+      <a class="auth__link" routerLink="/login">Log in</a>
+    </p>
+
+    <div class="alt">
+      <h4 class="alt__text">Or</h4>
+    </div>
+  </div>
+</div>
+
+<tb-footer></tb-footer>

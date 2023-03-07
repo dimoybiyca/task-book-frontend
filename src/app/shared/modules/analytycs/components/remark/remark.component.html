@@ -1,0 +1,9 @@
+<div class="block" *ngIf="statisticDays$ | async as statistic">
+  <h4 class="block__title">Let's take a look</h4>
+  <p class="block__create">
+    You create the most tasks on {{ statistic.mostCreateOn }}
+  </p>
+  <p class="block__complete">
+    You complete the most tasks on {{ statistic.mostCompleteOn }}
+  </p>
+</div>
